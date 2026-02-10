@@ -1,4 +1,4 @@
-# 📝 Blog Management Dashboard
+#Blog Management Dashboard
 
 A full-featured Blog Management Dashboard built as a full-stack application. Create, manage, and publish blog posts with advanced SEO-focused features, real-time slug validation, and a modern, responsive interface.
 
@@ -6,7 +6,7 @@ A full-featured Blog Management Dashboard built as a full-stack application. Cre
 ![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)
 
-## ✨ Features
+## Features
 
 ### 📋 Comprehensive Blog Post Management
 
@@ -28,7 +28,7 @@ Each blog post includes:
 - **Featured Flag** - Highlight important posts
 - **Timestamps** - Created and Updated tracking
 
-### 🎯 Dashboard Features
+### Dashboard Features
 
 - **Advanced Filtering** - Filter by status (Draft/Published/Archived/All)
 - **Smart Search** - Search by title or author name
@@ -37,7 +37,7 @@ Each blog post includes:
 - **Analytics Overview** - Total posts, published count, drafts, and total views
 - **Responsive Design** - Optimized table/card view for desktop and mobile
 
-### 🚀 Advanced Features
+###  Advanced Features
 
 - **Real-time Slug Validation** - Instant uniqueness check with visual feedback
 - **Blog Preview Mode** - Full preview before publishing with SEO meta display
@@ -50,7 +50,7 @@ Each blog post includes:
 - **Modern UI/UX** - Gradients, shadows, smooth animations
 - **Error Handling** - Comprehensive validation and user feedback
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Next.js** - React framework for production
@@ -70,7 +70,7 @@ Each blog post includes:
 ### Database
 - **MongoDB** - NoSQL database
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -158,7 +158,7 @@ Each blog post includes:
 - Monitor the SEO score indicator
 - Ensure content meets recommended length
 
-## 📸 Screenshots
+##  Screenshots
 
 <img width="877" height="894" alt="image" src="https://github.com/user-attachments/assets/fd7c821a-3c91-4944-ae81-dfdf77f5799a" />
 <img width="1307" height="660" alt="Screenshot 2026-02-10 170010" src="https://github.com/user-attachments/assets/94bd295e-9345-4a97-a70b-960a67cdb681" />
@@ -177,7 +177,7 @@ If running backend on a different port or IP:
 - Images are stored in `/uploads` directory by default
 - For production, consider using cloud storage (AWS S3, Cloudinary, etc.)
 
-## 🔧 Assumptions & Design Decisions
+##  Assumptions & Design Decisions
 
 ### Assumptions
 - User authentication is handled externally (admin access assumed)
@@ -192,7 +192,7 @@ If running backend on a different port or IP:
 - **Local file storage** for images (use cloud storage for production)
 - **Basic error handling** with alerts (could integrate toast notifications)
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 
 - [ ] User authentication and role-based access
 - [ ] Pagination for blog listing
@@ -205,7 +205,7 @@ If running backend on a different port or IP:
 - [ ] Version history for posts
 - [ ] Multi-language support
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -215,7 +215,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - React Quill for the rich text editor
 - Lucide React for beautiful icons
