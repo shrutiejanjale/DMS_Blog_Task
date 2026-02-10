@@ -100,15 +100,11 @@ Each blog post includes:
 
 4. **Configure environment variables**
    
-   Create a `.env` file in the backend root:
-   ```env
-   MONGODB_URI=mongodb://localhost:27017/blogdb
-   PORT=5000
-   ```
+   Create a `.env` file in the backend root
    
    For MongoDB Atlas, use your connection string:
    ```env
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/blogdb
+   MONGODB_URI=mongodb+srv://shrutijanjale6_db_user:abcabc@cluster0.nkslmmm.mongodb.net/?appName=Cluster0
    PORT=5000
    ```
 
@@ -218,14 +214,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-Your Name - [@your-username](https://github.com/your-username)
 
 ## 🙏 Acknowledgments
 
