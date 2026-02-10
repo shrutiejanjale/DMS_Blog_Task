@@ -5,6 +5,7 @@ import SeoScore from './SeoScore';
 import axios from 'axios';
 import { Calendar, User, Eye, Clock, Tag, ArrowLeft, Share2, Bookmark, Link as LinkIcon, Edit2 } from 'lucide-react';
 import Link from 'next/link';
+import { API_BASE_URL } from '../api/constant';
 
 export default function BlogPreview({ blog }) {
 
@@ -22,7 +23,7 @@ useEffect(() => {
 
   const incrementViewCount = async (blogId) => {
     try {
-      await axios.patch(`http://192.168.1.180:5000/api/blogs/${blogId}/increment-view`);
+      await axios.patch(`${API_BASE_URL}/api/blogs/${blogId}/increment-view`);
     } catch (error) {
       console.error('Error incrementing view count:', error);
     }

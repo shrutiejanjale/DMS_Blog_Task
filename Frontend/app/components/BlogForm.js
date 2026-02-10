@@ -4,6 +4,7 @@ import axios from 'axios';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import { Save, Upload, X, Tag, FileText, User, Folder, Image as ImageIcon, Star, Link as LinkIcon, Clock, AlertCircle } from 'lucide-react';
+import { API_BASE_URL } from '../api/constant';
 
 // Import ReactQuill dynamically with SSR disabled
 const ReactQuill = dynamic(() => import('react-quill-new'), {
@@ -50,7 +51,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
 
   useEffect(() => {
     if (initialData.featuredImage) {
-      setImagePreview(`http://192.168.1.180:5000${initialData.featuredImage}`);
+      setImagePreview(`${API_BASE_URL}${initialData.featuredImage}`);
     }
     // If editing, mark slug as manually edited to prevent auto-regeneration
     if (isEdit && initialData.slug) {
@@ -106,7 +107,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
     setSlugValidation({ checking: true, isUnique: true, message: '' });
 
     try {
-      const response = await axios.get(`http://192.168.1.180:5000/api/blogs/check-slug/${slug}`, {
+      const response = await axios.get(`${API_BASE_URL}/api/blogs/check-slug/${slug}`, {
         params: isEdit ? { excludeId: initialData._id } : {}
       });
 
@@ -197,11 +198,11 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
 
     try {
       if (isEdit) {
-        await axios.put(`http://192.168.1.180:5000/api/blogs/${initialData._id}`, data, {
+        await axios.put(`${API_BASE_URL}/api/blogs/${initialData._id}`, data, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
       } else {
-        await axios.post('http://192.168.1.180:5000/api/blogs', data, {
+        await axios.post(`${API_BASE_URL}/api/blogs`, data, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
       }

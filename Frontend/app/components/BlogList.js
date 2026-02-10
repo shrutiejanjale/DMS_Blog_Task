@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Plus, Search, Filter, Eye, Edit, Trash2, Globe, FileText, Clock, TrendingUp, Star, Archive, Link as LinkIcon } from 'lucide-react';
+import { API_BASE_URL } from '../api/constant';
 
 export default function BlogList() {
   const [blogs, setBlogs] = useState([]);
@@ -19,7 +20,7 @@ export default function BlogList() {
   const fetchBlogs = async () => {
     setIsLoading(true);
     try {
-      const res = await axios.get(`http://192.168.1.180:5000/api/blogs?status=${filter}&search=${search}`);
+      const res = await axios.get(`${API_BASE_URL}/api/blogs?status=${filter}&search=${search}`);
       setBlogs(res.data);
     } catch (error) {
       console.error('Error fetching blogs:', error);
@@ -30,7 +31,7 @@ export default function BlogList() {
 
   const handleTogglePublish = async (id, currentStatus) => {
     try {
-      await axios.patch(`http://192.168.1.180:5000/api/blogs/${id}/toggle-publish`);
+      await axios.patch(`${API_BASE_URL}/api/blogs/${id}/toggle-publish`);
       fetchBlogs();
     } catch (error) {
       console.error('Error toggling publish status:', error);
@@ -40,7 +41,7 @@ export default function BlogList() {
   const handleDelete = async (id) => {
     if (confirm('Are you sure you want to delete this blog post? This action cannot be undone.')) {
       try {
-        await axios.delete(`http://192.168.1.180:5000/api/blogs/${id}`);
+        await axios.delete(`${API_BASE_URL}/api/blogs/${id}`);
         fetchBlogs();
       } catch (error) {
         console.error('Error deleting blog:', error);
