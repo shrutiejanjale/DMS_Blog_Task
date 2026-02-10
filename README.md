@@ -8,7 +8,7 @@ A full-featured Blog Management Dashboard built as a full-stack application. Cre
 
 ## Features
 
-### 📋 Comprehensive Blog Post Management
+### Comprehensive Blog Post Management
 
 Each blog post includes:
 
@@ -165,7 +165,7 @@ Each blog post includes:
 <img width="877" height="894" alt="Screenshot 2026-02-10 170020" src="https://github.com/user-attachments/assets/7a694a6b-0614-42ba-87db-e10cff686b8c" />
 <img width="1901" height="892" alt="Screenshot 2026-02-10 165832" src="https://github.com/user-attachments/assets/615fd0e6-8aca-4e48-a494-286acc7b9223" />
 
-## ⚙️ Configuration Notes
+## Configuration Notes
 
 ### API URL Configuration
 If running backend on a different port or IP:
