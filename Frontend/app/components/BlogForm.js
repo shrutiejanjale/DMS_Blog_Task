@@ -260,7 +260,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                   placeholder="Enter an engaging title for your blog post"
                   value={formData.title}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all ${errors.title ? 'border-red-500' : 'border-slate-900'
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-black transition-all ${errors.title ? 'border-red-500' : 'border-slate-900'
                     }`}
                 />
                 {errors.title && <p className="text-red-500 text-sm mt-1 flex items-center gap-1">{errors.title}</p>}
@@ -281,7 +281,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                     placeholder="url-friendly-slug"
                     value={formData.slug}
                     onChange={handleSlugChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all font-mono text-sm ${errors.slug ? 'border-red-500' :
+                    className={`w-full px-4 py-3 border text-black rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all font-mono text-sm ${errors.slug ? 'border-red-500' :
                       slugValidation.checking ? 'border-yellow-500' :
                         !slugValidation.isUnique ? 'border-red-500' :
                           slugValidation.message ? 'border-green-500' : 'border-slate-300'
@@ -321,7 +321,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                     placeholder="Author's name"
                     value={formData.authorName}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all ${errors.authorName ? 'border-red-500' : 'border-slate-300'
+                    className={`w-full px-4 py-3 border text-black rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all ${errors.authorName ? 'border-red-500' : 'border-slate-300'
                       }`}
                   />
                   {errors.authorName && <p className="text-red-500 text-sm mt-1">{errors.authorName}</p>}
@@ -336,7 +336,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                     placeholder="Unique author identifier"
                     value={formData.authorId}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all ${errors.authorId ? 'border-red-500' : 'border-slate-300'
+                    className={`w-full px-4 py-3 text-black border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all ${errors.authorId ? 'border-red-500' : 'border-slate-300'
                       }`}
                   />
                   {errors.authorId && <p className="text-red-500 text-sm mt-1">{errors.authorId}</p>}
@@ -355,7 +355,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                     placeholder="e.g., Technology, Lifestyle, Business"
                     value={formData.category}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all ${errors.category ? 'border-red-500' : 'border-slate-300'
+                    className={`w-full px-4 py-3 text-black border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all ${errors.category ? 'border-red-500' : 'border-slate-300'
                       }`}
                   />
                   {errors.category && <p className="text-red-500 text-sm mt-1">{errors.category}</p>}
@@ -369,7 +369,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                     name="status"
                     value={formData.status}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all appearance-none bg-white cursor-pointer"
+                    className="w-full text-black px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all appearance-none bg-white cursor-pointer"
                   >
                     <option value="Draft">Draft</option>
                     <option value="Published">Published</option>
@@ -386,7 +386,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                     name="isFeatured"
                     checked={formData.isFeatured}
                     onChange={handleChange}
-                    className="w-5 h-5 text-amber-500 rounded focus:ring-2 focus:ring-amber-400"
+                    className="w-5 h-5 text-black text-amber-500 rounded focus:ring-2 focus:ring-amber-400"
                   />
                   <Star size={20} className="text-amber-500" fill={formData.isFeatured ? "currentColor" : "none"} />
                   <span className="font-medium text-slate-700">Mark as Featured Post</span>
@@ -404,7 +404,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                   placeholder="Enter tags separated by commas (e.g., react, javascript, tutorial)"
                   onChange={handleTags}
                   value={formData.tags.join(', ')}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 text-black py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
                 />
                 <p className="text-xs text-slate-500 mt-1">Separate multiple tags with commas</p>
               </div>
@@ -476,7 +476,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                 onChange={(val) => setFormData({ ...formData, content: val })}
                 modules={modules}
                 theme="snow"
-                className="bg-white rounded-lg"
+                className="bg-white rounded-lg text-black"
                 placeholder="Write your blog content here..."
               />
             </div>
@@ -503,7 +503,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                   placeholder="SEO-friendly title (50-60 characters)"
                   value={formData.metaTitle}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all bg-white"
+                  className="w-full text-black px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all bg-white"
                   maxLength="60"
                 />
                 <p className="text-xs text-slate-500 mt-1">{formData.metaTitle.length}/60 characters</p>
@@ -518,7 +518,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                   placeholder="Brief description for search results (150-160 characters)"
                   value={formData.metaDescription}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all bg-white resize-none"
+                  className="w-full text-black px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all bg-white resize-none"
                   rows="3"
                   maxLength="160"
                 />
@@ -534,7 +534,7 @@ export default function BlogForm({ initialData = {}, isEdit = false }) {
                   placeholder="Keywords separated by commas (e.g., web development, react tutorial)"
                   onChange={handleKeywords}
                   value={formData.seoKeywords.join(', ')}
-                  className="w-full px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all bg-white"
+                  className="w-full px-4 text-black py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all bg-white"
                 />
                 <p className="text-xs text-slate-500 mt-1">Add 3-5 relevant keywords for better SEO</p>
               </div>

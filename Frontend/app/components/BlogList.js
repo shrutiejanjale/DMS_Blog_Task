@@ -168,7 +168,7 @@ export default function BlogList() {
                 placeholder="Search by title or author..."
                 onChange={(e) => setSearch(e.target.value)}
                 value={search}
-                className="w-full pl-11 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                className="w-full text-black pl-11 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
               />
             </div>
 
@@ -178,7 +178,7 @@ export default function BlogList() {
               <select
                 onChange={(e) => setFilter(e.target.value)}
                 value={filter}
-                className="pl-11 pr-8 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all appearance-none bg-white cursor-pointer min-w-[200px]"
+                className="pl-11 text-black pr-8 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all appearance-none bg-white cursor-pointer min-w-[200px]"
               >
                 <option value="">All Posts</option>
                 <option value="Draft">Drafts Only</option>
